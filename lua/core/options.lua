@@ -63,8 +63,5 @@ vim.opt.confirm = true
 -- :cd goes to $HOME
 vim.opt.cdhome = true
 
--- Only have one status bar across multiple windows
-vim.opt.laststatus = 3
-
 -- 24bit RGB
 vim.opt.termguicolors = true
