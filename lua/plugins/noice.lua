@@ -1,9 +1,10 @@
 return {
   'folke/noice.nvim',
-  event = 'VeryLazy',
+  -- TODO: This causes the startup screen to get wiped
+  -- event = 'VeryLazy',
   opts = {
     lsp = {
-      -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+      -- override markdown rendering so that and other plugins use Treesitter
       override = {
         ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
         ['vim.lsp.util.stylize_markdown'] = true,
