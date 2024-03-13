@@ -1,7 +1,6 @@
 return {
   'folke/noice.nvim',
-  -- TODO: This causes the startup screen to get wiped
-  -- event = 'VeryLazy',
+  event = 'VeryLazy',
   opts = {
     lsp = {
       -- override markdown rendering so that and other plugins use Treesitter

@@ -2,15 +2,15 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
-  -- TODO: This causes the startup screen to get wiped
-  -- event = 'VeryLazy',
+  event = 'VeryLazy',
   opts = {
     options = {
       disabled_filetypes = {
-        statusline = { '' },
-        winbar = { '' },
+        statusline = { 'dashboard' },
+        winbar = { 'dashboard' },
       },
       globalstatus = true,
+      theme = 'tokyonight',
     },
     -- INFO: https://github.com/nvim-lualine/lualine.nvim?tab=readme-ov-file#extensions
     extensions = {},
