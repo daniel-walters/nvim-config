@@ -8,3 +8,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- Disable continuing commenstring on new line
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufWinEnter' }, {
+  desc = 'Disable continuing comments onto a new line',
+  group = vim.api.nvim_create_augroup('comment-new-line', { clear = true }),
+  callback = function()
+    vim.opt_local.formatoptions = 'tqj'
+  end,
+})
