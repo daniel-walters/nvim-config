@@ -65,3 +65,6 @@ vim.opt.cdhome = true
 
 -- 24bit RGB
 vim.opt.termguicolors = true
+
+-- Global statusline
+vim.opt.laststatus = 3
