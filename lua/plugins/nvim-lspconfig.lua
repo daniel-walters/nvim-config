@@ -95,6 +95,7 @@ return {
 
     -- INFO: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     local servers = {
+      eslint = {},
       gopls = {},
       tsserver = {},
       lua_ls = {
@@ -126,6 +127,7 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua',
+      'prettierd',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
