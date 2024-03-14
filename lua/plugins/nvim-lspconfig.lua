@@ -93,31 +93,7 @@ return {
       require('cmp_nvim_lsp').default_capabilities()
     )
 
-    -- INFO: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    local servers = {
-      eslint = {},
-      gopls = {},
-      tsserver = {},
-      lua_ls = {
-        settings = {
-          Lua = {
-            runtime = { version = 'LuaJIT' },
-            workspace = {
-              checkThirdParty = false,
-              -- Tells lua_ls where to find all the Lua files that you have loaded
-              -- for your neovim configuration.
-              library = {
-                '${3rd}/luv/library',
-                unpack(vim.api.nvim_get_runtime_file('', true)),
-              },
-            },
-            completion = {
-              callSnippet = 'Replace',
-            },
-          },
-        },
-      },
-    }
+    local servers = require('core.ensure_installed').lsp_servers
 
     --  To check the current status of installed tools and/or manually install
     --  other tools, you can run
@@ -125,10 +101,7 @@ return {
     require('mason').setup()
 
     local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
-      'stylua',
-      'prettierd',
-    })
+    vim.list_extend(ensure_installed, require('core.ensure_installed').mason)
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
