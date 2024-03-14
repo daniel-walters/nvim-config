@@ -68,3 +68,6 @@ vim.opt.termguicolors = true
 
 -- Global statusline
 vim.opt.laststatus = 3
+
+-- Disable native startup message
+vim.opt.shortmess:append 'I'
