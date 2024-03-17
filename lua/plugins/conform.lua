@@ -1,6 +1,6 @@
 -- INFO: https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
 local prettier_filetypes =
-  { 'javacsript', 'javacsriptreact', 'typescript', 'typescriptreact' }
+  { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' }
 
 local formatters_by_ft = { lua = { 'stylua' }, go = { 'gomft' } }
 
@@ -10,12 +10,12 @@ end
 
 return {
   'stevearc/conform.nvim',
-  event = 'BufWritepre',
+  event = 'BufWritePre',
   cmd = 'ConformInfo',
   opts = {
     notify_on_error = true,
     format_on_save = {
-      timeout_ms = 500,
+      timeout_ms = 5000,
       lsp_fallback = true,
     },
     formatters_by_ft = formatters_by_ft,
