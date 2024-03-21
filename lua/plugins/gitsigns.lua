@@ -1,3 +1,5 @@
+local opts = require('core.keymaps').opts
+
 return {
   'lewis6991/gitsigns.nvim',
   event = 'BufRead',
@@ -19,26 +21,26 @@ return {
         'n',
         '<leader>gb',
         gitsigns.toggle_current_line_blame,
-        { desc = '[G]it toggle [B]lame' }
+        opts '[G]it toggle [B]lame'
       )
 
       vim.keymap.set(
         'n',
         '<leader>gp',
         gitsigns.preview_hunk,
-        { desc = '[G]it [P]review hunk' }
+        opts '[G]it [P]review hunk'
       )
 
       vim.keymap.set(
         'n',
         '<leader>gd',
         gitsigns.diffthis,
-        { desc = '[G]it show [D]iff (last commit)' }
+        opts '[G]it show [D]iff (last commit)'
       )
 
       vim.keymap.set('n', '<leader>gD', function()
         gitsigns.diffthis '~'
-      end, { desc = '[G]it show [D]iff (last push)' })
+      end, opts '[G]it show [D]iff (last push)')
     end,
   },
 }
