@@ -1,6 +1,12 @@
 -- INFO: https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
-local prettier_filetypes =
-  { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' }
+local prettier_filetypes = {
+  'javascript',
+  'javascriptreact',
+  'typescript',
+  'typescriptreact',
+  'scss',
+  'css',
+}
 
 local formatters_by_ft = { lua = { 'stylua' }, go = { 'gomft' } }
 

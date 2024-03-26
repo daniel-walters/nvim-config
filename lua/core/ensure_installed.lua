@@ -2,6 +2,7 @@ local M = {}
 
 -- INFO: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 M.lsp_servers = {
+  cssls = {},
   eslint = {},
   gopls = {},
   tsserver = {},
@@ -28,6 +29,7 @@ M.lsp_servers = {
 
 M.mason = {
   'stylua',
+  'gofmt',
   'prettierd',
 }
 
