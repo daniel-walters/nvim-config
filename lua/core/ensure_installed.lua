@@ -29,7 +29,6 @@ M.lsp_servers = {
 
 M.mason = {
   'stylua',
-  'gofmt',
   'prettierd',
 }
 
