@@ -32,4 +32,10 @@ M.mason = {
   'prettierd',
 }
 
+-- NOTE: https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
+M.daps = {
+  'delve',
+  'node2',
+}
+
 return M

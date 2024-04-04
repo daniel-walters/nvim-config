@@ -1,5 +1,12 @@
 return {
   'folke/neodev.nvim',
   event = 'VimEnter',
-  opts = {},
+  opts = {
+    library = {
+      plugins = {
+        'nvim-dap-ui',
+      },
+      types = true,
+    },
+  },
 }
