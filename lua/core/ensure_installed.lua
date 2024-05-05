@@ -4,7 +4,11 @@ local M = {}
 M.lsp_servers = {
   cssls = {},
   eslint = {},
+  html = {},
+  htmx = {},
   gopls = {},
+  intelephense = {},
+  templ = {},
   tsserver = {},
   lua_ls = {
     settings = {
@@ -37,5 +41,9 @@ M.daps = {
   'delve',
   'node2',
 }
+
+M.register_additional_filetypes = function()
+  vim.filetype.add { extension = { templ = 'templ' } }
+end
 
 return M

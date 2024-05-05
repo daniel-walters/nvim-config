@@ -8,7 +8,8 @@ local prettier_filetypes = {
   'css',
 }
 
-local formatters_by_ft = { lua = { 'stylua' }, go = { 'gomft' } }
+local formatters_by_ft =
+  { lua = { 'stylua' }, go = { 'gomft' }, templ = { 'templ' } }
 
 for _, ft in pairs(prettier_filetypes) do
   formatters_by_ft[ft] = { { 'prettierd', 'prettier' } }
