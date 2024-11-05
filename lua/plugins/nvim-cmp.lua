@@ -18,8 +18,6 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
-    'zbirenbaum/copilot.lua',
-    { 'zbirenbaum/copilot-cmp', opts = {} },
   },
   config = function()
     local cmp = require 'cmp'
@@ -54,7 +52,6 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
-        { name = 'copilot' },
       },
     }
   end,

@@ -9,10 +9,10 @@ local prettier_filetypes = {
 }
 
 local formatters_by_ft =
-  { lua = { 'stylua' }, go = { 'gomft' }, templ = { 'templ' } }
+  { lua = { 'stylua' }, go = { 'goimports' }, templ = { 'templ' } }
 
 for _, ft in pairs(prettier_filetypes) do
-  formatters_by_ft[ft] = { { 'prettierd', 'prettier' } }
+  formatters_by_ft[ft] = { 'prettierd', 'prettier', stop_after_first = true }
 end
 
 return {

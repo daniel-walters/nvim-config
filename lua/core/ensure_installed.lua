@@ -6,10 +6,17 @@ M.lsp_servers = {
   eslint = {},
   html = {},
   htmx = {},
-  gopls = {},
+  graphql = {},
+  gopls = {
+    settings = {
+      gopls = {
+        staticcheck = true,
+      },
+    },
+  },
   intelephense = {},
   templ = {},
-  tsserver = {},
+  ts_ls = {},
   lua_ls = {
     settings = {
       Lua = {
@@ -34,6 +41,7 @@ M.lsp_servers = {
 M.mason = {
   'stylua',
   'prettierd',
+  'staticcheck',
 }
 
 -- NOTE: https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua

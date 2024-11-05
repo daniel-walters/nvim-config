@@ -4,7 +4,7 @@ return {
   config = function()
     local which_key = require 'which-key'
 
-    which_key.setup()
+    which_key.setup { notify = false }
 
     which_key.register {
       ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
@@ -15,6 +15,7 @@ return {
       ['<leader>f'] = { name = '[F]ile', _ = 'which_key_ignore' },
       ['<leader>m'] = { name = '[M]ark', _ = 'which_key_ignore' },
       ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
+      ['<leader>n'] = { name = '[N]otes', _ = 'which_key_ignore' },
     }
   end,
 }
